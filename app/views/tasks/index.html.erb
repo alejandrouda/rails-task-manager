@@ -1,0 +1,19 @@
+
+<h1>Tasks</h1>
+
+<% @tasks.each do |task|  %>
+<div class="tasks">
+    <div class="checkbox">
+        <% if task.completed%>
+            <i class="far fa-check-square"></i>
+        <% else %>
+            <i class="far fa-square"></i>
+        <% end %>
+    </div>
+    <div class="title">
+        <h3><%= task.title%></h3>
+    </div>
+</div>
+ <p><%= link_to "See details", task_path(task) %></p>
+ <br>
+<% end %>
